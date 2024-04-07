@@ -1,0 +1,6 @@
+    if (isFilterChainEnabled()) {
+      requestByFilter(context, microserviceName, versionRule, path);
+      return;
+    }
+
+    requestByHandler(context, microserviceName, versionRule, path);
